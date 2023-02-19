@@ -1,2 +1,3 @@
 import zip from "./zip";
-export { zip };
+import head from "./head";
+export { zip, head };
