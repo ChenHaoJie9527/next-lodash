@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "prepare": "husky install",
     "test": "vitest --ui --coverage",
-     "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "vitest": "^0.28.5",
@@ -20,7 +20,9 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitest/coverage-istanbul": "^0.28.5",
+    "@vitest/ui": "^0.28.5",
     "eslint": "^8.34.0",
+    "happy-dom": "^8.5.0",
     "husky": "^8.0.3",
     "typescript": "^4.9.3",
     "vite": "^4.1.0",
