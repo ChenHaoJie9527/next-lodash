@@ -1,30 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1676958700951" clover="3.2.0">
-  <project timestamp="1676958700951" name="All files">
-    <metrics statements="18" coveredstatements="18" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2" elements="24" coveredelements="24" complexity="0" loc="18" ncloc="18" packages="1" files="2" classes="2"/>
-    <file name="head.ts" path="D:/v-lodash/vue-ts/src/lib/array/head.ts">
+<coverage generated="1676977400205" clover="3.2.0">
+  <project timestamp="1676977400205" name="All files">
+    <metrics statements="22" coveredstatements="22" conditionals="8" coveredconditionals="8" methods="3" coveredmethods="3" elements="33" coveredelements="33" complexity="0" loc="22" ncloc="22" packages="1" files="3" classes="3"/>
+    <file name="head.ts" path="E:/next-lodash/src/lib/array/head.ts">
       <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="8" count="2" type="stmt"/>
-      <line num="9" count="18" type="stmt"/>
-      <line num="10" count="18" type="stmt"/>
-      <line num="13" count="2" type="stmt"/>
-      <line num="14" count="2" type="stmt"/>
-      <line num="15" count="2" type="stmt"/>
-      <line num="16" count="2" type="stmt"/>
-      <line num="17" count="2" type="stmt"/>
-      <line num="18" count="2" type="stmt"/>
-      <line num="19" count="2" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="9" count="7" type="stmt"/>
+      <line num="10" count="7" type="stmt"/>
+      <line num="13" count="1" type="stmt"/>
+      <line num="14" count="1" type="stmt"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="16" count="1" type="stmt"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="19" count="1" type="stmt"/>
     </file>
-    <file name="zip.ts" path="D:/v-lodash/vue-ts/src/lib/array/zip.ts">
+    <file name="last.ts" path="E:/next-lodash/src/lib/array/last.ts">
+      <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="2" type="cond" truecount="4" falsecount="0"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+    </file>
+    <file name="zip.ts" path="E:/next-lodash/src/lib/array/zip.ts">
       <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
-      <line num="21" count="20" type="cond" truecount="4" falsecount="0"/>
-      <line num="23" count="15" type="stmt"/>
-      <line num="24" count="15" type="stmt"/>
-      <line num="26" count="15" type="stmt"/>
-      <line num="29" count="2" type="stmt"/>
-      <line num="30" count="2" type="stmt"/>
-      <line num="32" count="2" type="stmt"/>
-      <line num="33" count="2" type="stmt"/>
+      <line num="21" count="8" type="cond" truecount="4" falsecount="0"/>
+      <line num="23" count="6" type="stmt"/>
+      <line num="24" count="6" type="stmt"/>
+      <line num="26" count="6" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="30" count="1" type="stmt"/>
+      <line num="32" count="1" type="stmt"/>
+      <line num="33" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
