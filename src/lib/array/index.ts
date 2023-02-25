@@ -1,4 +1,5 @@
 import zip from "./zip";
 import head from "./head";
 import last from "./last";
-export { zip, head, last };
+import tail from "./tail";
+export { zip, head, last, tail };
