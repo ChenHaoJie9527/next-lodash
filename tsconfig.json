@@ -14,6 +14,6 @@
     "noEmit": true,
     "noImplicitAny": true
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/lib/index.js", "src/lib/index.js"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/lib/index.ts", "src/lib/index.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
