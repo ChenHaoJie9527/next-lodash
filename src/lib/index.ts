@@ -7,3 +7,5 @@ const _ = {
 };
 
 export { chunk };
+
+export default _;
