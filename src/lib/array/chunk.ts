@@ -19,7 +19,7 @@
  *
  * chunk([1, 2, 3, 4, 5], 0);
  * // returns []
- * 
+ *
  * chunk([1, 2, 3, 4, 5] as const,, 2)
  * // returns [[1, 2], [3, 4], [5]]
  */
@@ -57,28 +57,32 @@ function chunk(
   size: number = 1,
   cache: unknown[] = []
 ) {
-  const tmp = arr.concat([]);
-  const len = tmp === null ? 0 : tmp.length;
-  if (!len || size <= 0) {
+  const tmp = [...arr];
+  const maxSize = Math.max(size, 0);
+  const lent = tmp === null ? 0 : tmp.length;
+  if (!lent || maxSize < 1) {
     return cache;
   }
+  let index = 0;
+  let resIndex = 0;
+  const result = new Array(Math.ceil(tmp.length / maxSize));
 
-  while (tmp.length) {
-    cache.push(tmp.slice(0, size));
+  while (index < lent) {
+    result[resIndex++] = tmp.slice(index, (index += maxSize));
   }
-
+  cache.push(...result);
   return cache;
 }
-// const value = [1, 2, 3, 4, 5, 6, 7] as const;
-// const value1 = [1, 2, 3, 4, 5, "a"];
-// const res1 = chunk(value1);
-// const res2 = chunk(value1, 2);
+const value = [1, 2, 3, 4, 5, 6, 7] as const;
+const value1 = [1, 2, 3, 4, 5, "a"];
+const res1 = chunk(value1);
+const res2 = chunk(value1, 2);
 
-// type Result = Chunk<[1, 2, 3, 4, 5]>;
+type Result = Chunk<[1, 2, 3, 4, 5]>;
 
-// const a = chunk(value, 1);
-// const b = chunk(value, 2);
-// const c = chunk(value, 3);
-// const d = chunk(value);
+const a = chunk(value, 1);
+const b = chunk(value, 2);
+const c = chunk(value, 3);
+const d = chunk(value);
 
 export default chunk;
