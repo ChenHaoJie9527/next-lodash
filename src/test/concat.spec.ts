@@ -13,6 +13,5 @@ describe("array/concat", () => {
     expect(res).toBeDefined();
     expect(res.length).not.toBe(0);
     expect(res.length).toBe(9);
-
   });
 });
