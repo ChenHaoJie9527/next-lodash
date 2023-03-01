@@ -58,7 +58,7 @@ function chunk(
   cache: unknown[] = []
 ) {
   const tmp = [...arr];
-  const maxSize = Math.max(size, 0);
+  const maxSize = Math.max(size <= 0 ? 1 : size, 0);
   const lent = tmp === null ? 0 : tmp.length;
   if (!lent || maxSize < 1) {
     return cache;
