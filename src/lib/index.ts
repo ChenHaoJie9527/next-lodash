@@ -1,11 +1,11 @@
 import * as array from "./array";
 
-import { chunk } from "./array";
+import { chunk, compact } from "./array";
 
 const _ = {
   ...array,
 };
 
-export { chunk };
+export { chunk, compact };
 
 export default _;

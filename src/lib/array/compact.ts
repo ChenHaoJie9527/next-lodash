@@ -19,8 +19,8 @@ type Compact<
     >
   : Res;
 
-type Res = Compact<["1", 1, 2, 3, 4, undefined, null, "", 0, typeof NaN]>; // ["1", 1, 2, 3, 4]
-const arr = [1, 2, undefined, null, 0, NaN, false, 3];
+const res = ["1", 1, 2, 3, 4, undefined, null, "", 0, typeof NaN] as const;
+type Res = Compact<typeof res>; // ["1", 1, 2, 3, 4]
 
 function compact<T extends readonly unknown[]>(array: T): Compact<T> | [] {
   if (!array.length || !Array.isArray(array) || array === null) {
