@@ -14,7 +14,7 @@ function chainable<
   K extends string,
   U extends any,
   T extends Record<string, any> = {}
->(target: T, key?: K, value?: U): Config<T> {
+>(target: T, _key?: K, _value?: U): Config<T> {
   const config: Config<T> = {
     option(key, value) {
       return {
@@ -23,12 +23,20 @@ function chainable<
       };
     },
     get() {
-      return target;
+      if (_key && _value) {
+        return {
+          ...target,
+          [_key]: _value,
+        };
+      } else {
+        return {
+          ...target,
+        };
+      }
     },
   };
 
   return config;
 }
-
 
 export default chainable;
