@@ -30,10 +30,18 @@ describe("object/chainable", () => {
   it("调用chainable函数，第一个参数为{}， 第二个参数为 name，第三个参数为 zzy", () => {
     const config = chainable({}, "name", "zzy");
     const target = config.get();
-    console.log("target", target);
     expect(target).toBeDefined();
     expect(target).not.toBeUndefined();
     expect(target).not.toBeNull();
     expect(target).toEqual({ name: "zzy" });
+  });
+
+  it("s使用option，添加key value至目标对象中", () => {
+    const config = chainable({});
+    const target = config.option("age", 20).get();
+    expect(target).toBeDefined();
+    expect(target).not.toBeUndefined();
+    expect(target).not.toBeNull();
+    expect(target).toEqual({ age: 20 });
   });
 });
