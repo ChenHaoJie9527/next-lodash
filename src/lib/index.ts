@@ -3,12 +3,12 @@ import * as object from "./object";
 
 import { chunk, compact } from "./array";
 
-import { get } from "./object";
+import { get, chainable } from "./object";
 const _ = {
   ...array,
   ...object,
 };
 
-export { chunk, compact, get };
+export { chunk, compact, get, chainable };
 
 export default _;
