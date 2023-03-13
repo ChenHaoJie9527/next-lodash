@@ -36,12 +36,25 @@ describe("object/chainable", () => {
     expect(target).toEqual({ name: "zzy" });
   });
 
-  it("s使用option，添加key value至目标对象中", () => {
-    const config = chainable({});
+  it("使用option，添加key value至目标对象中", () => {
+    const config = chainable({ name: "foo" });
     const target = config.option("age", 20).get();
     expect(target).toBeDefined();
     expect(target).not.toBeUndefined();
     expect(target).not.toBeNull();
-    expect(target).toEqual({ age: 20 });
+    expect(target).toEqual({ age: 20, name: "foo" });
+  });
+
+  it("多次调用option，返回对象", () => {
+    const config = chainable({});
+    const target = config
+      .option("name", "foo")
+      .option("key", 1)
+      .option("age", 29)
+      .get();
+    expect(target).toBeDefined();
+    expect(target).not.toBeUndefined();
+    expect(target).not.toBeNull();
+    expect(target).toEqual({ age: 20, name: "foo", key: 1 });
   });
 });
