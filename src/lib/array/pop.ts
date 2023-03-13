@@ -1,11 +1,15 @@
-type Pop<T extends any[]> = T extends [...infer K, infer U]
+type Pop<T extends readonly any[]> = T extends [...infer K, infer U]
   ? [...K]
   : [];
-function pop<T extends any[]>(arr: [...T]): Pop<T> {
+
+function pop<T extends readonly any[]>(arr: readonly [...T]): Pop<T>;
+function pop(arr: readonly any[] = []) {
   if (Array.isArray(arr) && typeof arr !== "undefined" && arr.length) {
-    return arr.pop()!;
+    const lent = arr.length - 1;
+    const list = arr.slice(0, lent);
+    return list;
   } else {
-    return []
+    return [];
   }
 }
 
