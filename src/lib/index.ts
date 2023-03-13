@@ -1,7 +1,7 @@
 import * as array from "./array";
 import * as object from "./object";
 
-import { chunk, compact } from "./array";
+import { chunk, compact, pop } from "./array";
 
 import { get, chainable } from "./object";
 const _ = {
@@ -9,6 +9,6 @@ const _ = {
   ...object,
 };
 
-export { chunk, compact, get, chainable };
+export { chunk, compact, get, chainable, pop };
 
 export default _;
